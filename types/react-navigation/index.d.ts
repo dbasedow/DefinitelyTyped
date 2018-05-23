@@ -939,3 +939,19 @@ export interface SafeAreaViewProps extends ViewProps {
 }
 
 export const SafeAreaView: React.ComponentClass<SafeAreaViewProps>;
+
+export class StateUtils {
+  static pop(state: NavigationState): NavigationState;
+  static get(state: NavigationState, key: string): NavigationRoute;
+  static indexOf(state: NavigationState, key: string): number;
+  static has(state: NavigationState, key: string): boolean;
+  static push(state: NavigationState, route: NavigationRoute): NavigationState;
+  static jumpToIndex(state: NavigationState, index: number): NavigationState;
+  static jumpTo(state: NavigationState, key: string): NavigationState;
+  static back(state: NavigationState): NavigationState;
+  static forward(state: NavigationState): NavigationState;
+  static replaceAt(state: NavigationState, key: string, route: NavigationRoute): NavigationState;
+  static replaceAtIndex(state: NavigationState, index: number, route: NavigationRoute): NavigationState;
+  static reset(state: NavigationState, routes: NavigationRoute[], index?: number): NavigationState;
+}
+
